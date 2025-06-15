@@ -14,12 +14,11 @@ export class RMaps {
   // XXX: This should maybe be in our "operations" class?
   // TODO: insert this into Drawing tools, not Token tools.
   static onGetSceneControlButtons(buttons) {
-    const tokenTools = buttons.find((b) => b.name === "token")?.tools;
-    tokenTools?.push({
+    buttons.tokens.tools.drawEdge = {
       name: "drawEdge",
       title: "Draw a connection",
       icon: "fas fa-chart-network",
-    });
+    };
   }
 
   static get allEdges() {
